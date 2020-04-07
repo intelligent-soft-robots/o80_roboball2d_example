@@ -11,6 +11,11 @@ def run():
     #       of the robot (i.e. going to safe position)
     hw_control = HardwareControl()
 
+    # initializing the simulation by having it mirroring
+    # the real robot
+    angles,angular_velocities,_ = hw_control.get_real_robot()
+    hw_control.set_mirroring(angles,angular_velocities)
+    
     # a dummy policy using pd control
     # with random target angles
     policy = Policy()
@@ -72,9 +77,8 @@ def run():
             
 
         # episode end
-        # getting episode's history of contacts between simulated robot
-        # and simulated balls
-        history = hw_control.get_sim_ball_contacts_history(sim_iteration)
+        # getting episode's simulation history 
+        history = hw_control.get_sim_history(sim_iteration)
         # counting the number of contacts between virtual racket
         # and virtual balls
         nb_contacts = sum([sum(observation.get_extended_state().balls_hits_racket)
