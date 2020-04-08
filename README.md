@@ -167,6 +167,12 @@ The following packages are used in this example:
 - roboball2d_interface : the driver to roboball2d, according to the interface provided by robot_interfaces. See: [github isr](https://github.com/intelligent-soft-robots/roboball2d_interface)
 - o80_roboball2d : the o80 backends and frontends on top of roboball2d_interface. See: [github isr](https://github.com/intelligent-soft-robots/o80_roboball2d)
 - o80_roboball2d_example : an example showing the user code using the API provided by o80_roboball2d. See: [gitub isr](https://github.com/intelligent-soft-robots/o80_roboball2d_example)  
+
+# Limitations
+
+This software has been created for the purpose of testing o80. It is not expected to be used beyond this, and no documentation is offered.
  
+ # Author
  
+ Vincent Berenz, Max Planck Institute for Intelligent Systems
  
