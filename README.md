@@ -2,7 +2,7 @@
 # What it is
 
 o80 is a software for synchronizing and communicating with processes.
-It is a candidate for helping the development of software architecture of systems involving several processes running in parallel at various frequencies.
+It has been made for helping the development of software architecture of systems involving several processes running in parallel at various frequencies.
 This example is made to evaluate o80 in a lightweight virtual environment, before possible deployment on real systems.
 
 In this example, 5 processes run in parallel:
@@ -14,7 +14,7 @@ In this example, 5 processes run in parallel:
 
 The processes above have been developed using [roboball2d](https://github.com/intelligent-soft-robots/roboball2d).
 
-Drivers to these processes are encapsulated by o80 backend servers, and o80 frontend API is used to develop, as an example, this application which runs episodes in a loop, each episode consisting of:
+Drivers to these processes are encapsulated by o80 backend servers. o80 frontend python API has been used to develop an [example application](https://github.com/intelligent-soft-robots/o80_roboball2d_example/blob/master/example.py), which runs episodes in a loop. Each episode consisting of:
 
 - A PD controller is used to send command to (1) via an o80 frontend such as having (1) reaching a starting vertical initial posture
 - o80 frontends are used to get (2) and (5) to shoot balls
@@ -26,11 +26,11 @@ Drivers to these processes are encapsulated by o80 backend servers, and o80 fron
 
 When the application is exited, the robot (1) goes back to a safe position before releasing all torques.
 
-The objective of o80 frontends is to provide an API simple yet powerful enough to make the development of the application above trivial.
+The objective of is to provide an API simple yet powerful enough to make the development of the application described above trivial.
 
 # Installation
 
-Installation requires a machine installed with ubuntu 18.04.
+Installation requires a machine installed with ubuntu 18.04. 
 
 ## installing dependencies
 
